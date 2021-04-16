@@ -31,7 +31,7 @@ function CreditCard(props) {
                 <div><img src={logo(props.type)} height="20" /></div>
                 <div>
                     <h2>**** **** **** {props.number.slice(12)}</h2>
-                    <p>Expires {props.expirationMonth}/{props.expirationYear} {props.bank}</p>
+                    <p>Expires {getMonth(props.expirationMonth)}/{props.expirationYear % 2000} {props.bank}</p>
                     <p>{props.owner}</p>
                 </div>
             </div>
